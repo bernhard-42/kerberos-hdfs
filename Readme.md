@@ -4,6 +4,8 @@
 
 ### KDC image
 
+Uses [sssd-kerberos-server-clients](https://github.com/bernhard-42/sssd-kerberos-server-clients)
+
 ```bash
 git clone git@github.com:bernhard-42/sssd-kerberos-server-clients.git
 cd sssd-kerberos-server-clients
@@ -17,8 +19,11 @@ sudo ./podman-build 1.0.0
 
 ### Hadoop image
 
+Uses [tiny-hadoop](https://github.com/bernhard-42/tiny-hadoop)
+
 ```bash
 git clone git@github.com:bernhard-42/tiny-hadoop.git
+git checkout kerberos
 cd tiny-hadoop
 ```
 
