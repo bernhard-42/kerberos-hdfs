@@ -23,6 +23,7 @@ Uses [tiny-hadoop](https://github.com/bernhard-42/tiny-hadoop)
 
 ```bash
 git clone git@github.com:bernhard-42/tiny-hadoop.git
+git checkout kerberos
 cd tiny-hadoop
 git checkout kerberos
 ```
