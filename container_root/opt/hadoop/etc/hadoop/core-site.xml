@@ -1,0 +1,25 @@
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://0.0.0.0:8020</value>
+    </property>
+
+    <!-- KERBEROS -->
+
+    <property>
+        <name>hadoop.security.authentication</name>
+        <value>kerberos</value>
+    </property>
+    <property>
+        <name>hadoop.security.authorization</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hadoop.security.auth_to_local</name>
+        <value>
+            RULE:[2:$1@$0](hdfs/.*@.*ACME.LOCALDOMAIN)s/.*/hdfs/
+            RULE:[2:$1@$0](HTTP/.*@.*ACME.LOCALDOMAIN)s/.*/hdfs/
+            DEFAULT
+        </value>
+    </property>
+</configuration>
